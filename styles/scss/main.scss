@@ -1,310 +1,39 @@
-$colorprincipal: black;
-$ColorBackground: lightgray;
-
 /* selector universal */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "./base/resset";
 
-body {
-    display: grid;
-    grid-template-columns: 150px 3fr 1fr;
-    grid-template-rows: 100px 300px 1fr 20%;
-    grid-template-areas:
-        "header   header   header"
-        "main     main    aside"
-        "main     main    aside"
-        "footer   footer   footer";
-    font-family: 'Roboto', sans-serif;
-}
+/*   queries   */
+@import "./base/queries";
 
+/*    variables  */
+@import "./abstracts/variables";
 
-@media only screen and (max-width: 600px) {
-    body {
-        display: grid;
-        grid-template-columns: 1fr 60px;
+/* grid */
+@import './layout/grid';
 
+/*  mixin */
+@import "./abstracts/mixins";
 
-        grid-template-rows: 100px 300px 1fr 20% auto 300px;
+/* buttoms y cards */
+@import "./components/buttoms";
 
+/* header */
+@import "./layout/header";
 
-        grid-template-areas:
-            "header   header"
-            "main     main "
-            "main     main  "
-            "aside     aside  "
-            "aside     aside  "
-            "footer   footer  ";
-        font-family: 'Roboto', sans-serif;
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-header {
-    background-color: $ColorBackground;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-area: header;
-    align-self: stretch;
-
-    .logodiv {
-        display: flex;
-        flex-direction: row;
-
-        .logo {
-            height: 80px;
-        }
-    }
-}
-
-nav {
-
-    background-color: $ColorBackground;
-    color: $colorprincipal;
-    display: contents;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    text-decoration: none;
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
-
-    li {
-        float: left;
-
-        a {
-            display: inline;
-            color: $colorprincipal;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            justify-content: space-between;
-        }
-    }
-
-}
+/* navbar  */
+@import "./layout/navbar";
 
 /* main*/
-main {
-    background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
-    ;
-    grid-area: main;
-h1 {
-    text-align: center;
-    font-size: 1.5rem;
-}
-    #presentacion {
-        color: $colorprincipal;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@import "./layout/main";
 
-        h1 {
-            text-align: center;
-            font-size: 2rem;
+/* aside  */
+@import "./layout/aside";
 
-        }
-    }
-
-    #Aprendizaje {
-        color: $colorprincipal;
-        margin-bottom: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        h2 {
-            text-align: center;
-            font-size: 1.5rem;
-        }
-
-        p {
-            text-align: center;
-            font-size: 1rem;
-            max-width: 80%;
-            margin: 20px 0;
-        }
-    
-            ul {
-                text-align: center;
-                font-size: 1rem;
-                max-width: 80%;
-                margin: 20px 0;
-            }
-        }
-
-
-
-#destacados {
-    color: $colorprincipal;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
-    h3 {
-        text-align: center;
-        font-size: 1.5rem;
-        padding: 10px;
-    }
-
-    iframe {
-        width: 60%;
-        height: 60%;
-        border-radius: 20px;
-
-    }
-}
-
-.TituloAprendizaje {
-    text-align: center;
-    font-size: 1rem;
-}
-
-aside {
-    grid-area: aside;
-    background-color: darkviolet;
-
-
-
-    h4 {
-        display: flex;
-        text-align: center;
-        margin-top: 50px;
-    }
-
-    .cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 30px;
-        max-width: 1300px;
-        align-items: center;
-        flex: 50%;
-    }
-
-    .casos {
-        background-color: $ColorBackground;
-        color: $colorprincipal;
-        width: 200px;
-        padding: 25px;
-        margin: 10px;
-        text-align: center;
-        border-radius: 10px;
-        border: 5px solid white;
-        flex: 50%;
-
-        p {
-            margin: 20px 0;
-        }
-    }
-}
-
-.profesores {
-    background-color: $ColorBackground;
-    color: $colorprincipal;
-    width: 200px;
-    padding: 25px;
-    margin: 10px;
-    text-align: center;
-    border-radius: 10px;
-    border: 5px solid white;
-   
-    fieldset {
-        display:flex;
-        flex-direction: column;
-        margin: 10px;
-         }
-    p {
-        margin: 20px 0;
-    }
-
-  
-}
-  
-footer {
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0;
-    grid-area: footer;
-
-    h6 {
-        margin-bottom: 20px;
-    }
-}
-
-.footerEnlaces {
-    padding-top: 20px;
-    padding-left: 20px;
-    width: 190%;
-    height: 80%;
-    display: flow-root;
-    flex-direction: row;
-    align-items: center;
-
-    ul {
-        list-style-type: none;
-    }
-
-    a {
-        text-decoration: none;
-        color: $colorprincipal;
-        display: flex;
-    }
-}
-
-.footerRedes {
-    width: 15%;
-    padding-top: 20px;
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    padding-right: 100px;
-    padding-left: 100px;
-
-    ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
-        color: $colorprincipal;
-    }
-
-    img {
-        width: 30px;
-    }
-}
-
-.footerContainer {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-}
+/* footer */
+@import "./layout/footer";
 
 .newsletter {
     form {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include flex($display: flex, $items, $direction);
 
         input {
             padding: 10px 15px;
@@ -326,26 +55,10 @@ footer {
     width: 100%;
     height: 80%;
     border-top: 2px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    @include flex($display, $direction, $items, $content: space-evenly);
 }
 
-.button {
-    font-weight: 600;
-    background-color: lightblue;
-    padding:  9px 6px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    color: $colorprincipal;
-    text-decoration: none;
-}
 
 #imgnosotros {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-} 
+    @include flex($display, $content , $items);
+    padding: 20px;}

@@ -1,0 +1,28 @@
+nav {
+
+    background-color: $ColorBackground;
+    color: $colorprincipal;
+    @include flex($display: content, $items, $content: space-between);
+    font-weight: bold;
+    text-decoration: none;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    li {
+        float: left;
+
+        a {
+            @include flex($display: inline, $content: space-between);
+            color: $colorprincipal;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+    }
+
+}
