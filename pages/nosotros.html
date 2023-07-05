@@ -13,23 +13,23 @@
 
 <body>
     <header>
-    
-            <nav class="navbar">
+
+        <nav class="navbar">
             <div class="logodiv">
                 <img src="../img/logo.png" class="logo" alt="curso online">
             </div>
-           
-           
-        
-                <ul>
-                    <li><a href="../index.html">INICIO</a></li>
-                    <li><a href="./cursos.html">CURSOS</a></li>
-                    <li><a href="./nosotros.html">NOSOTROS</a></li>
-                </ul>
-            </nav>
-           
 
-       
+
+
+            <ul>
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="./cursos.html">CURSOS</a></li>
+                <li><a href="./nosotros.html">NOSOTROS</a></li>
+            </ul>
+        </nav>
+
+
+
     </header>
 
     <main>
@@ -43,70 +43,63 @@
         </section>
 
 
-        <div class="Aprendizaje">
+        <section id="Aprendizaje">
             <h2>LA TIENDA VIRTUAL DE APRENDIZAJE Y ENSENIANZA GLOBAL LIDER </h2>
 
             <p> Al conectar estudiantes de todo el mundo con los mejores instructores, ayudamos a las personas a
                 alcanzar sus
                 metas y perseguir sus suenios</p>
-        </div>
-        <!-- <div class="casos">
-            <div>
-                <h5> Samuel Leal</h5>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est provident ullam, quo veniam
-                    maiores
-                    earum quisquam nulla laudantium a asperiores itaque expedita odio nam labore atque esse, in
-                    delectus ipsam.
-                </p>
-            </div>
-        </div> -->
+        </section>
+
 
     </main>
 
     <aside>
-        <div class="container">
+        <div class="cards">
             <div class="profesores">
                 <h3>Quieres pertenecer a nuestro equipo?</h3>
                 <p>Sumate a nuestro staff de profesores</p>
                 <a class="button" href="./nosotros.html">Quiero sumarme</a>
             </div>
+
+            <div class="profesores">
+                <form action="formulario">
+                    <fieldset>
+                        <legend> CONTACTO </legend>
+
+                        <div>
+                            <label for="nombre"> Nombre </label>
+                            <input type="text" id="nombre" placeholder="Nombre">
+                        </div>
+
+                        <div>
+                            <label for="apellido"> Apellido </label>
+                            <input type="text" id="apellido" placeholder="Apellido">
+                        </div>
+
+                        <div>
+                            <label for="telefono"> Telefono </label>
+                            <input type="number" id="telefono" placeholder="Telefono">
+                        </div>
+
+                        <div>
+                            <label for="email"> Email </label>
+                            <input type="email" id="email" placeholder="Email">
+                        </div>
+
+                        <label for="consulta"> Mensaje </label>
+                        <textarea name="consulta" id="consulta" cols="30" rows="10"> </textarea>
+                        <a class="button">
+                            <input type="submit" value="Enviar">
+                            <input type="reset" value="Limpiar">
+                        </a>
+
+                    </fieldset>
+
+                </form>
+            </div>
+
         </div>
-
-        <form action="formulario">
-            <fieldset>
-                <legend> CONTACTO </legend>
-
-                <div>
-                    <label for="nombre"> Nombre </label>
-                    <input type="text" id="nombre" placeholder="Nombre">
-                </div>
-
-                <div>
-                    <label for="apellido"> Apellido </label>
-                    <input type="text" id="apellido" placeholder="Apellido">
-                </div>
-
-                <div>
-                    <label for="telefono"> Telefono </label>
-                    <input type="number" id="telefono" placeholder="Telefono">
-                </div>
-
-                <div>
-                    <label for="email"> Email </label>
-                    <input type="email" id="email" placeholder="Email">
-                </div>
-
-                <label for="consulta"> Mensaje </label>
-                <textarea name="consulta" id="consulta" cols="30" rows="10"> </textarea>
-                <a class="button">
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpiar">
-                </a>
-
-            </fieldset>
-
-        </form>
     </aside>
 
     <footer>
