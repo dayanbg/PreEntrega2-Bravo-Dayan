@@ -1,7 +1,7 @@
 footer {
     background-color: lightgray;
-    @include flex($display, $direction, $items);
-    padding: 30px 0;
+    @include flex($display:flex, $direction:column, $items:center);
+    padding: 70px 0;
     grid-area: footer;
 
     h6 {
@@ -14,7 +14,7 @@ footer {
     padding-left: 20px;
     width: 190%;
     height: 80%;
-    @include flex($display: flow-root, $direction, $items);
+    @include flex($display: flow-root, $direction:column, $items:center);
 
     ul {
         list-style-type: none;
@@ -32,10 +32,11 @@ footer {
     padding-top: 20px;
     width: 100%;
     height: 80%;
-    @include flex($display, $direction: row, $items: flex-end);
+    @include flex($display:flex, $direction: row, $items: flex-end);
     padding-right: 100px;
     padding-left: 100px;
 
+   
     ul {
         display: flex;
         list-style-type: none;
@@ -45,6 +46,9 @@ footer {
 
     img {
         width: 30px;
+       
+   display: flex;
+   justify-content: space-around;
     }
 }
 
@@ -53,4 +57,29 @@ footer {
     height: 80%;
     display: flex;
     align-items: center;
+}
+
+/* newslette 
+.newsletter {
+    form {
+        @include flex($display: flex, $items, $direction);*/
+
+        input {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 15px;
+
+            button {
+                margin-top: 15px;
+                border: none;
+                background-color: lightgray;
+            }
+
+        }
+   
+.copyright {
+    padding-top: 20px;
+    width: 100%;
+    height: 80%;
+    @include flex($display:flex, $direction:column, $items:center, $content: space-evenly);
 }

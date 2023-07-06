@@ -2,7 +2,9 @@ nav {
 
     background-color: $ColorBackground;
     color: $colorprincipal;
-    @include flex($display: content, $items, $content: space-between);
+    display: contents;
+    align-items: center;
+    justify-content: space-between;
     font-weight: bold;
     text-decoration: none;
 
@@ -17,7 +19,9 @@ nav {
         float: left;
 
         a {
-            @include flex($display: inline, $content: space-between);
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
             color: $colorprincipal;
             text-align: center;
             padding: 14px 16px;

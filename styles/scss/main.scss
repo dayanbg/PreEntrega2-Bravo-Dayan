@@ -15,6 +15,7 @@
 
 /* buttoms y cards */
 @import "./components/buttoms";
+@import "./components/cards";
 
 /* header */
 @import "./layout/header";
@@ -31,34 +32,4 @@
 /* footer */
 @import "./layout/footer";
 
-.newsletter {
-    form {
-        @include flex($display: flex, $items, $direction);
 
-        input {
-            padding: 10px 15px;
-            border: none;
-            border-radius: 15px;
-
-            button {
-                margin-top: 15px;
-                border: none;
-                background-color: lightgray;
-            }
-
-        }
-    }
-}
-
-.copyright {
-    padding-top: 20px;
-    width: 100%;
-    height: 80%;
-    border-top: 2px solid;
-    @include flex($display, $direction, $items, $content: space-evenly);
-}
-
-
-#imgnosotros {
-    @include flex($display, $content , $items);
-    padding: 20px;}
