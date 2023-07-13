@@ -6,20 +6,11 @@
 }
 
 /*   queries   */
-body {
-  display: grid;
-  grid-template-columns: 150px 3fr 1fr;
-  grid-template-rows: 100px 300px 1fr 20%;
-  grid-template-areas: "header   header   header" "main     main    aside" "main     main    aside" "footer   footer   footer";
-  font-family: "Roboto", sans-serif;
-}
-
-@media (max-width: 390px) {
+@media (max-width: 450px) {
   body {
     display: grid;
-    grid-template-columns: 100px;
-    grid-template-rows: 100px 100px 1fr 20% auto 100px;
-    grid-template-areas: "header" "main" "main" "aside" "aside" "footer";
+    grid-template-rows: 80px auto auto 75%;
+    grid-template-areas: "header" "main" "main" "footer";
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
     display: flex;
@@ -28,28 +19,24 @@ body {
 }
 /*    variables  */
 /* grid */
-/*
 body {
-
-    display: grid;
-    grid-template-columns: 150px 3fr 1fr;
-    grid-template-rows: 100px 300px 1fr 20%;
-    grid-template-areas:
-        "header   header   header"
-        "main     main    aside"
-        "main     main    aside"
-        "footer   footer   footer";
-    font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 1fr 10%;
+  grid-template-areas: "header header" "main    main" "footer  footer";
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
 }
-*/
+
 /*  mixin */
 /* buttoms y cards */
 .button {
   font-weight: 600;
-  background-color: lightblue;
-  padding: 9px 6px;
-  border: none;
+  padding: 10px;
+  border: 1px solid darkviolet;
   border-radius: 50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   cursor: pointer;
   color: black;
   text-decoration: none;
@@ -59,7 +46,10 @@ body {
 .container {
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   max-width: 1100px;
+  padding-left: 13%;
 }
 
 .card {
@@ -107,6 +97,16 @@ body {
   color: #fff;
 }
 
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+  }
+}
 /* header */
 header {
   background-color: lightgray;
@@ -124,6 +124,12 @@ header .logodiv .logo {
   height: 80px;
 }
 
+@media (max-width: 450px) {
+  header {
+    height: 100px;
+    width: 100%;
+  }
+}
 /* navbar  */
 nav {
   background-color: lightgray;
@@ -153,10 +159,18 @@ nav li a {
   text-decoration: none;
 }
 
+@media (max-width: 450px) {
+  nav {
+    display: flex;
+  }
+}
 /* main*/
 main {
   background-image: linear-gradient(90deg, #74EBD5 0%, #9FACE6 100%);
   grid-area: main;
+}
+main .cursosBody {
+  width: 100%;
 }
 main h1 {
   text-align: center;
@@ -181,17 +195,20 @@ main #Aprendizaje {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 main #Aprendizaje h2 {
   text-align: center;
   font-size: 1.5rem;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 main #Aprendizaje p {
   text-align: center;
   font-size: 1rem;
   max-width: 80%;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 main #Aprendizaje ul {
   display: flex;
@@ -205,6 +222,7 @@ main #Aprendizaje ul {
 .items {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: white;
 }
 .items li {
@@ -234,32 +252,23 @@ main #Aprendizaje ul {
   height: 60%;
   border-radius: 20px;
 }
-
-.TituloAprendizaje {
-  text-align: center;
-  font-size: 1rem;
-}
-
-/* aside  */
-aside {
-  grid-area: aside;
-  background-color: darkviolet;
-}
-aside h4 {
+#destacados h4 {
   display: flex;
   text-align: center;
   margin-top: 50px;
 }
-aside .cards {
+
+.cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 50px;
+  flex-direction: row;
+  margin-top: 80px;
   max-width: 1300px;
   flex: 50%;
 }
-aside .casos {
+
+.casos {
   background-color: lightgray;
   color: black;
   width: 200px;
@@ -270,26 +279,98 @@ aside .casos {
   border: 5px solid white;
   flex: 50%;
 }
-aside .casos p {
+.casos p {
   margin: 20px 0;
 }
 
 .profesores {
-  background-color: lightgray;
+  background-color: #fff;
   color: black;
-  width: 200px;
+  width: 400px;
   height: 400px;
   padding: 25px;
   margin: 10px;
   text-align: center;
   border-radius: 10px;
-  border: 5px solid white;
+  border: 5px solid lightblue;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
+.profesores h3 {
+  font-family: 400;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+.profesores p {
+  line-height: 1.5;
+}
 
+.TituloAprendizaje {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h4 {
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+}
+
+#imgnosotros {
+  display: flex;
+  justify-content: center;
+}
+
+.formulario {
+  width: 100vh;
+  height: 100vh;
+  padding: 10px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.formulario legend {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 2px solid darkviolet;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+@media (max-width: 450px) {
+  #destacados {
+    height: 80vh;
+    margin-bottom: 10px;
+  }
+  #destacados h3 {
+    margin-bottom: 20px;
+  }
+  #destacados iframe {
+    width: 60%;
+    height: 60%;
+  }
+}
+@media (max-width: 450px) {
+  .formulario {
+    width: 100%;
+  }
+}
+/* aside  
+@import "./layout/aside"; */
 /* footer */
 footer {
   background-color: lightgray;
@@ -343,6 +424,7 @@ footer h6 {
 }
 .footerRedes img {
   width: 30px;
+  padding-left: 40%;
   display: flex;
   justify-content: space-around;
 }
@@ -354,10 +436,6 @@ footer h6 {
   align-items: center;
 }
 
-/* newslette 
-.newsletter {
-    form {
-        @include flex($display: flex, $items, $direction);*/
 input {
   padding: 10px 15px;
   border: none;
@@ -369,14 +447,34 @@ input button {
   background-color: lightgray;
 }
 
-.copyright {
-  padding-top: 20px;
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
+@media (max-width: 450px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footerContainer {
+    display: flex;
+    align-items: center;
+    align-items: center;
+  }
+  .footerEnlaces {
+    padding-left: 20px;
+    width: 190%;
+    height: 80%;
+  }
+  .footerEnlaces a {
+    display: flex;
+    padding-left: 20px;
+  }
+  .footerRedes {
+    padding-right: 30%;
+    display: flex;
+    justify-content: center;
+    padding-left: 30%;
+    padding-top: 68px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

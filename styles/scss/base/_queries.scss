@@ -1,31 +1,16 @@
-body {
-    display: grid;
-    grid-template-columns: 150px 3fr 1fr;
-    grid-template-rows: 100px 300px 1fr 20%;
-    grid-template-areas:
-        "header   header   header"
-        "main     main    aside"
-        "main     main    aside"
-        "footer   footer   footer";
-    font-family: 'Roboto', sans-serif;
-}
-
-@media (max-width: 390px) {
+@media (max-width: 450px) {
     body {
         display: grid;
-        grid-template-columns: 100px;
-        grid-template-rows: 100px 100px 1fr 20% auto 100px;
+        grid-template-rows: 80px auto auto 75%;
         grid-template-areas:
             "header"
             "main"
             "main"
-            "aside"
-            "aside"
             "footer";
         font-family: 'Roboto', sans-serif;
         overflow-x: hidden;
         display: flex;
         flex-direction: column;
-        
     }
 }
+

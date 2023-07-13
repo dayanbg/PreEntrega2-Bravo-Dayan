@@ -7,11 +7,19 @@ header {
     align-self: stretch;
 
     .logodiv {
-      display:flex;
-      flex-direction: row;
+        display: flex;
+        flex-direction: row;
 
         .logo {
             height: 80px;
         }
     }
+}
+
+@media (max-width: 450px) {
+    header {
+        height: 100px;
+        width: 100%;
+    }
+
 }
