@@ -1,108 +1,93 @@
-footer {
+.pie-pagina {
     background-color: $ColorBackground;
-    @include flex($display: flex, $direction: column, $items: center);
-    padding: 70px 0;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin: auto;
     grid-area: footer;
 
-    h6 {
-        margin-bottom: 20px;
-    }
-}
+    .grupo1 {
+        width: 100%;
+        height: 100%;
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        padding: 45px 0px;
+        overflow: hidden;
 
-.footerEnlaces {
-    padding-top: 20px;
-    padding-left: 20px;
-    width: 190%;
-    height: 80%;
-    @include flex($display: flow-root, $direction: column, $items: center);
+        .box {
+            ul {
+                list-style: none;
+            }
 
-    ul {
-        list-style-type: none;
-    }
+            a {
+                text-decoration: none;
+                color: $colorprincipal;
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+            }
 
-    a {
-        text-decoration: none;
-        color: $colorprincipal;
-        display: flex;
-    }
-}
+            .redes-sociales {
+                ul {
+                    display: flex;
+                    justify-content: space-between;
+                }
 
-.footerRedes {
-    width: 15%;
-    padding-top: 20px;
-    width: 100%;
-    height: 80%;
-    @include flex($display: flex, $direction: row, $items: flex-end);
-    padding-right: 100px;
-    padding-left: 100px;
+                img {
+                    width: 30px;
+                    text-align: center;
+                }
+            }
 
+            h5 {
+                color:$colorprincipal;
+                margin-bottom: 25px;
+                font-size: 20px;
+            }
 
-    ul {
-        display: flex;
-        list-style-type: none;
-        justify-content: space-between;
-        color: $colorprincipal;
-    }
+            figure {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-    img {
-        width: 30px;
-        padding-left: 40%;
-        display: flex;
-        justify-content: space-around;
-    }
-}
+                img {
+                    width: 100px;
+                }
 
-.footerContainer {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    align-items: center;
-}
-
-input {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 15px;
-
-    button {
-        margin-top: 15px;
-        border: none;
-        background-color: lightgray;
-    }
-
-}
-
-
-@media (max-width: 450px) {
-    footer {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footerContainer {
-        display: flex;
-        align-items: center;
-        align-items: center;
-    }
-
-    .footerEnlaces {
-        padding-left: 20px;
-        width: 190%;
-        height: 80%;
-
-        a {
-            display: flex;
-            padding-left: 20px;
+            }
         }
     }
 
-    .footerRedes {
-        padding-right: 30%;
-        display: flex;
-        justify-content: center;
-        padding-left: 30%;
-        padding-top: 68px;
+}
+
+
+@media screen and (max-width:450px) {
+    .pie-pagina {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        margin: auto;
+        grid-area: footer;
+
+        .grupo1 {
+            width: 100%;
+            height: 200px;
+            grid-template-rows: repeat(1, 1fr);
+            grid-gap: 10px;
+            text-align: center;
+            padding: 25px;
+            overflow: hidden;
+            margin: auto;
+
+            .box {
+                figure img {
+                    width: 60px;
+                }
+            }
+        }
     }
 }

@@ -9,7 +9,7 @@
     <meta name="keywords" content="contacto, oficinas, argentina, web">
     <link rel="stylesheet" href="../styles/css/style.css">
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./img/logo.png">
+    <link rel="shortcut icon" href="../img/logo.png">
     <title>Tu Curso Online | Contacto</title>
 
 </head>
@@ -42,67 +42,57 @@
         </section>
 
 
-            <section class="formulario">
-                <legend> CONTACTO </legend>
+        <form action="">
+            <h2> CONTACTO </h2>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="correo" placeholder="Correo">
+            <input type="text" name="telefono" placeholder="Telefono">
+            <textarea name="mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+            <input type="submit" value="Enviar" id="boton">
+            <input type="reset" value="Limpiar" id="boton">
+        </form>
 
-                    <label for="nombre"> Nombre </label>
-                    <input class="controls"  type="text" id="nombre" placeholder="Nombre">
-    
-                    <label for="apellido"> Apellido </label>
-                    <input class="controls" type="text" id="apellido" placeholder="Apellido">
-            
-                    <label for="telefono"> Telefono </label>
-                    <input class="controls"  type="number" id="telefono" placeholder="Telefono">
-        
-                    <label for="email"> Email </label>
-                    <input class="controls" type="email" id="email" placeholder="Email">
-            
-                <label for="consulta"> Mensaje </label>
-                <textarea class="controls" name="consulta" id="consulta" cols="30" rows="10"> </textarea>
-    
-                <a class="button">
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpiar">
-                </a>
-            </section>
 
-    
 
 
     </main>
 
-    <footer>
-        <div class="footerContainer">
-            <div class="footerEnlaces">
-
+    <footer class="pie-pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../img/logo.png" alt="Logo tu curso online">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h5>MAS INFORMACION</h5>
                 <ul>
-                    <li><a href="../pages/contacto.html">CONTACTO</a></li>
+                    <li><a href="#">CONTACTO</a></li>
                     <li><a href="../pages/preguntas-frecuentes.html">PREGUNTAS FRECUENTES</a></li>
                 </ul>
-
+            </div>
+            <div class="box">
+                <h5> SIGUENOS</h5>
+                <div class="redes-sociales">
+                    <ul>
+                        <li><a href="www.facebook.com" target="_blank"></a>
+                            <img src="../img/facebook.svg" alt="Logo facebook">
+                            </a>
+                        </li>
+                        <li><a href="../index.html" target="_blank"></a>
+                            <img src="../img/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li><a href="../index.html" target="_blank"></a>
+                            <img src="../img/whatsapp.svg" alt="whatsapp">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-
-            <div class="footerRedes">
-                <ul>
-                    <li><a href="www.facebook.com" target="_blank"></a>
-                        <img src="../img/facebook.svg" alt="Logo facebook">
-                        </a>
-                    </li>
-                    <li><a href="www.instagram.com" target="_blank"></a>
-                        <img src="../img/instagram.svg" alt="instagram">
-                        </a>
-                    </li>
-                    <li><a href="www.whatsapp.com" target="_blank"></a>
-                        <img src="../img/whatsapp.svg" alt="whatsapp">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-        
-
 
     </footer>
 

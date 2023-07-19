@@ -1,14 +1,8 @@
 /* selector universal */
 @import "./base/resset";
 
-/*   queries   */
-@import "./base/queries";
-
 /*    variables  */
 @import "./abstracts/variables";
-
-/* grid */
-@import './layout/grid';
 
 /*  mixin */
 @import "./abstracts/mixins";
@@ -16,6 +10,9 @@
 /* buttoms y cards */
 @import "./components/buttoms";
 @import "./components/cards";
+
+/* body */
+@import "./layout/body";
 
 /* header */
 @import "./layout/header";
@@ -26,8 +23,6 @@
 /* main*/
 @import "./layout/main";
 
-/* aside  
-@import "./layout/aside"; */
 
 /* footer */
 @import "./layout/footer";

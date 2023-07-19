@@ -5,29 +5,7 @@
   box-sizing: border-box;
 }
 
-/*   queries   */
-@media (max-width: 450px) {
-  body {
-    display: grid;
-    grid-template-rows: 80px auto auto 75%;
-    grid-template-areas: "header" "main" "main" "footer";
-    font-family: "Roboto", sans-serif;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-  }
-}
 /*    variables  */
-/* grid */
-body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15vh 1fr 10%;
-  grid-template-areas: "header header" "main    main" "footer  footer";
-  font-family: "Roboto", sans-serif;
-  overflow-x: hidden;
-}
-
 /*  mixin */
 /* buttoms y cards */
 .button {
@@ -107,6 +85,24 @@ body {
     padding-left: 0;
   }
 }
+/* body */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: "header header" "main    main" "footer  footer";
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+@media (max-width: 450px) {
+  body {
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header" "main" "footer";
+    font-family: "Roboto", sans-serif;
+  }
+}
 /* header */
 header {
   background-color: lightgray;
@@ -126,7 +122,7 @@ header .logodiv .logo {
 
 @media (max-width: 450px) {
   header {
-    height: 100px;
+    height: 200px;
     width: 100%;
   }
 }
@@ -174,7 +170,8 @@ main .cursosBody {
 }
 main h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin-top: 25px;
 }
 main #presentacion {
   color: black;
@@ -184,12 +181,8 @@ main #presentacion {
   align-items: center;
   flex-direction: column;
 }
-main #presentacion h1 {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 25px;
-}
-main #Aprendizaje {
+
+#Aprendizaje {
   color: black;
   display: flex;
   justify-content: center;
@@ -198,19 +191,19 @@ main #Aprendizaje {
   margin-top: 15px;
   margin-bottom: 30px;
 }
-main #Aprendizaje h2 {
+#Aprendizaje h2 {
   text-align: center;
   font-size: 1.5rem;
   margin-top: 50px;
   margin-bottom: 20px;
 }
-main #Aprendizaje p {
+#Aprendizaje p {
   text-align: center;
   font-size: 1rem;
   max-width: 80%;
   margin: 15px 0;
 }
-main #Aprendizaje ul {
+#Aprendizaje ul {
   display: flex;
   text-align: center;
   align-items: center;
@@ -233,14 +226,11 @@ main #Aprendizaje ul {
 }
 
 #destacados {
-  color: black;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden;
-  margin-bottom: 20px;
 }
 #destacados h3 {
   text-align: center;
@@ -325,20 +315,44 @@ h4 {
   justify-content: center;
 }
 
-.formulario {
-  width: 100vh;
-  height: 100vh;
-  padding: 10px;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+form {
+  width: 450px;
   margin: auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 7px;
 }
-.formulario legend {
-  font-size: 22px;
+form h2 {
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 30px;
   margin-bottom: 20px;
+}
+form input, form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 7px;
+  box-sizing: border-box;
+  font-size: 17px;
+  border: none;
+}
+
+textarea {
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+#boton {
+  background-color: #31384a;
+  color: #fff;
+  padding: 20px;
+}
+#boton :hover {
+  cursor: pointer;
 }
 
 .controls {
@@ -351,10 +365,56 @@ h4 {
   font-size: 16px;
 }
 
-@media (max-width: 450px) {
+.contenedor-acordeon {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+.acordeon {
+  background-color: #fff;
+  margin-top: 20px;
+}
+.acordeon label {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  background-color: darkviolet;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 2px;
+  transition: all 300ms ease;
+}
+.acordeon label :hover {
+  background-color: violet;
+}
+.acordeon .contenido-acordeon {
+  padding: 0px;
+  margin: 0px 20px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 300ms ease;
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon {
+  max-height: 600px;
+  padding: 15px 0px;
+}
+
+.btn-acordeon {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  .contenedor-acordeon {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 450px) {
   #destacados {
-    height: 80vh;
-    margin-bottom: 10px;
+    height: 58vh;
   }
   #destacados h3 {
     margin-bottom: 20px;
@@ -364,116 +424,84 @@ h4 {
     height: 60%;
   }
 }
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
   .formulario {
     width: 100%;
   }
 }
-/* aside  
-@import "./layout/aside"; */
 /* footer */
-footer {
+.pie-pagina {
   background-color: lightgray;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 70px 0;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin: auto;
   grid-area: footer;
 }
-footer h6 {
-  margin-bottom: 20px;
+.pie-pagina .grupo1 {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+  overflow: hidden;
 }
-
-.footerEnlaces {
-  padding-top: 20px;
-  padding-left: 20px;
-  width: 190%;
-  height: 80%;
-  display: flow-root;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.pie-pagina .grupo1 .box ul {
+  list-style: none;
 }
-.footerEnlaces ul {
-  list-style-type: none;
-}
-.footerEnlaces a {
+.pie-pagina .grupo1 .box a {
   text-decoration: none;
   color: black;
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
 }
-
-.footerRedes {
-  width: 15%;
-  padding-top: 20px;
+.pie-pagina .grupo1 .box .redes-sociales ul {
+  display: flex;
+  justify-content: space-between;
+}
+.pie-pagina .grupo1 .box .redes-sociales img {
+  width: 30px;
+  text-align: center;
+}
+.pie-pagina .grupo1 .box h5 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.pie-pagina .grupo1 .box figure {
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  flex-direction: row;
-  padding-right: 100px;
-  padding-left: 100px;
-}
-.footerRedes ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: space-between;
-  color: black;
-}
-.footerRedes img {
-  width: 30px;
-  padding-left: 40%;
-  display: flex;
-  justify-content: space-around;
-}
-
-.footerContainer {
-  width: 100%;
-  height: 80%;
-  display: flex;
   align-items: center;
 }
-
-input {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 15px;
-}
-input button {
-  margin-top: 15px;
-  border: none;
-  background-color: lightgray;
+.pie-pagina .grupo1 .box figure img {
+  width: 100px;
 }
 
-@media (max-width: 450px) {
-  footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+@media screen and (max-width: 450px) {
+  .pie-pagina {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    margin: auto;
+    grid-area: footer;
   }
-  .footerContainer {
-    display: flex;
-    align-items: center;
-    align-items: center;
+  .pie-pagina .grupo1 {
+    width: 100%;
+    height: 200px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 10px;
+    text-align: center;
+    padding: 25px;
+    overflow: hidden;
+    margin: auto;
   }
-  .footerEnlaces {
-    padding-left: 20px;
-    width: 190%;
-    height: 80%;
-  }
-  .footerEnlaces a {
-    display: flex;
-    padding-left: 20px;
-  }
-  .footerRedes {
-    padding-right: 30%;
-    display: flex;
-    justify-content: center;
-    padding-left: 30%;
-    padding-top: 68px;
+  .pie-pagina .grupo1 .box figure img {
+    width: 60px;
   }
 }
 
