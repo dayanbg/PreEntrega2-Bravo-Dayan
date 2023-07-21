@@ -69,10 +69,21 @@ main {
         text-align: center;
     }
 }
-
+#consulta {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  font-size: x-large;
+}
 #destacados {
-    height: 80vh;
-    @include flex($display: flex, $direction: column, $items: center, $content: center);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     h3 {
         text-align: center;
@@ -81,8 +92,8 @@ main {
     }
 
     iframe {
-        width: 60%;
-        height: 60%;
+        margin-top: 20px;
+        height: 80%;
         border-radius: 20px;
 
     }
@@ -168,7 +179,7 @@ margin: auto;
 background: rgba(0,0,0,0.3) ;
 padding: 10px 20px;
 box-sizing: border-box;
-margin-top: 20px;
+margin-bottom: 30px;
 border-radius: 7px;
 
 h2 {
@@ -266,7 +277,8 @@ margin-top: 20px;
 
 @media screen and (max-width: 450px) {
     #destacados {
-        height: 58vh;
+        width: 100%;
+        height: auto;
 
         h3 {
             margin-bottom: 20px;

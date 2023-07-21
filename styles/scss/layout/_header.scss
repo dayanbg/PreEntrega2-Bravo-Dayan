@@ -4,11 +4,21 @@ header {
     justify-content: space-between;
     align-items: center;
     grid-area: header;
-    align-self: stretch;
+    border-bottom: 1px solid black;
+    box-shadow: 5px 0 10px rgba(0,0,0,0.4);
 
+label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+   border-right: 1px solid #fff;
+}
+input {
+    display: none;
+}
     .logodiv {
         display: flex;
-        flex-direction: row;
 
         .logo {
             height: 80px;
@@ -16,10 +26,28 @@ header {
     }
 }
 
-@media (max-width: 450px) {
+@media screen and (max-width: 450px) {
     header {
-        height: 200px;
+        height: 80px;
         width: 100%;
+       
+
+        label {
+            display: block;
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+        .logodiv {
+            display: none
+        }
+    }
+        #btn-menu:checked ~ .navbar li {
+            margin: 0;
+        }
+
+       
+
+        
     }
 
-}
