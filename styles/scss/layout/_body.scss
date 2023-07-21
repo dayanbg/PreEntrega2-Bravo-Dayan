@@ -22,3 +22,16 @@ body {
 
     }
 }
+
+@media (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+        font-family: 'Roboto', sans-serif;
+
+    }
+}

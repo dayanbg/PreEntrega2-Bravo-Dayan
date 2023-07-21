@@ -42,7 +42,7 @@
             }
 
             h5 {
-                color:$colorprincipal;
+                color: $colorprincipal;
                 margin-bottom: 25px;
                 font-size: 20px;
             }
@@ -83,12 +83,14 @@
             .box {
                 display: flex;
                 flex-direction: column;
-h5 {
- font-size: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-}
+
+                h5 {
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+
                 a {
                     justify-content: center;
                     font-weight: 200;
@@ -97,6 +99,7 @@ h5 {
                 ul {
                     text-align: center;
                 }
+
                 figure img {
                     width: 60px;
                 }
@@ -104,6 +107,7 @@ h5 {
         }
     }
 }
+
 @media screen and (max-width: 800px) {
     .pie-pagina {
         width: 100%;

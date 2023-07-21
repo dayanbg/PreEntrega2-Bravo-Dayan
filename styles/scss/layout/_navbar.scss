@@ -5,7 +5,7 @@
     text-align: center;
     font-weight: bold;
     text-decoration: none;
-   
+
     ul {
         list-style-type: none;
         margin: 0;
@@ -34,44 +34,35 @@
 @media (max-width:450px) {
 
     .navbar {
-    position: absolute;
-background-color: lightblue;
-width: 70%;
+        position: absolute;
+        background-color: lightblue;
+        width: 70%;
 
 
         ul {
             display: flex;
             flex-direction: column;
-           width: 80%;
-           margin-left: -70%;
-            /*
-            position: fixed;
-            width: 100vw;
-            height: calc(100% - 65px);
-            background: $ColorBackground;
-            top: -100vh;
-            text-align: center;
-            transition: all .4s;
-            flex-direction: column;
-     */
-        li {
-         border-top: 1px solid $colorprincipal;
-         width: 70%;
-         margin-left: -70%;
-         background-color: lightblue;
-    
-            a {
-                font-size: 20px;
-                color: $colorprincipal;
-                font-weight: bold;
-             width: 70%;
-            } 
-        }
+            width: 80%;
+            margin-left: -70%;
+
+            li {
+                border-top: 1px solid $colorprincipal;
+                width: 70%;
+                margin-left: -70%;
+                background-color: lightblue;
+
+                a {
+                    font-size: 20px;
+                    color: $colorprincipal;
+                    font-weight: bold;
+                    width: 70%;
+                }
+            }
         }
     }
 }
-   .btn_menu {
+
+.btn_menu {
     width: 30px;
     height: 30px;
 }
-    

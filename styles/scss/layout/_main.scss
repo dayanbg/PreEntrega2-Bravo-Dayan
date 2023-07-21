@@ -18,42 +18,42 @@ main {
         height: 30vh;
         @include flex($display: flex, $direction: column, $items: center, $content: center);
 
-        } 
+    }
+}
+
+#Aprendizaje {
+    color: $colorprincipal;
+    @include flex($display: flex, $direction: column, $items: center, $content: center);
+    margin-top: 15px;
+    margin-bottom: 30px;
+
+    h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
-    #Aprendizaje {
-        color: $colorprincipal;
-        @include flex($display: flex, $direction: column, $items: center, $content: center);
-        margin-top: 15px;
-        margin-bottom: 30px;
+    p {
+        text-align: center;
+        font-size: 1rem;
+        max-width: 80%;
+        margin: 15px 0;
 
-        h2 {
-            text-align: center;
-            font-size: 1.5rem;
-            margin-top: 50px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            text-align: center;
-            font-size: 1rem;
-            max-width: 80%;
-            margin: 15px 0;
-
-        }
-
-        ul {
-            display: flex;
-            text-align: center;
-            align-items: center;
-            font-size: 1rem;
-            max-width: 80%;
-            margin: 20px 0;
-
-
-
-        }
     }
+
+    ul {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        font-size: 1rem;
+        max-width: 80%;
+        margin: 20px 0;
+
+
+
+    }
+}
 
 
 .items {
@@ -69,14 +69,16 @@ main {
         text-align: center;
     }
 }
+
 #consulta {
     display: flex;
     justify-content: center;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px;
-  font-size: x-large;
+    font-size: x-large;
 }
+
 #destacados {
     width: 100%;
     height: auto;
@@ -174,47 +176,50 @@ h4 {
 }
 
 form {
-width: 450px;
-margin: auto;
-background: rgba(0,0,0,0.3) ;
-padding: 10px 20px;
-box-sizing: border-box;
-margin-bottom: 30px;
-border-radius: 7px;
-
-h2 {
-    color: $color;
-text-align: center;
-margin: 0;
-font-size: 30px;
-margin-bottom: 20px;
-}
-
-input, textarea {
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 7px;
+    width: 450px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
     box-sizing: border-box;
-    font-size: 17px;
-    border: none;
-}
+    margin-bottom: 30px;
+    border-radius: 7px;
+
+    h2 {
+        color: $color;
+        text-align: center;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 7px;
+        box-sizing: border-box;
+        font-size: 17px;
+        border: none;
+    }
 
 }
+
 textarea {
     min-height: 100px;
     max-height: 200px;
     max-width: 100%;
- }
+}
 
- #boton {
+#boton {
     background-color: #31384a;
     color: $color;
     padding: 20px;
-:hover {
-    cursor: pointer;
+
+    :hover {
+        cursor: pointer;
+    }
 }
- }
- 
+
 .controls {
     width: 100%;
     padding: 10px;
@@ -230,12 +235,12 @@ textarea {
     max-width: 800px;
     margin: auto;
     margin-top: 80px;
-margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .acordeon {
     background-color: $color;
-margin-top: 20px;
+    margin-top: 20px;
 
     label {
         display: block;
@@ -261,10 +266,12 @@ margin-top: 20px;
 
     }
 }
-.btn-acordeon:checked ~ .contenido-acordeon {
+
+.btn-acordeon:checked~.contenido-acordeon {
     max-height: 600px;
     padding: 15px 0px;
 }
+
 .btn-acordeon {
     display: none;
 }
