@@ -64,7 +64,14 @@ a {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding-left: 0;
+        padding: 5px;
       
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        padding-left: 0;
+        object-fit: contain;
     }
 }
